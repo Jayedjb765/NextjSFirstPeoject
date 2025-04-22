@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "brand": "SoundMax",
+      "price": 89.99,
+      "image": "https://assets.example.com/products/headphones.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Smartphone Stand",
+      "category": "Accessories",
+      "brand": "GripMate",
+      "price": 12.49,
+      "image": "https://assets.example.com/products/stand.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Fitness Tracker",
+      "category": "Wearables",
+      "brand": "FitPulse",
+      "price": 59.95,
+      "image": "https://assets.example.com/products/tracker.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Laptop Backpack",
+      "category": "Bags",
+      "brand": "UrbanGear",
+      "price": 45.0,
+      "image": "https://assets.example.com/products/backpack.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Gaming Mouse",
+      "category": "Computers",
+      "brand": "ProClick",
+      "price": 29.99,
+      "image": "https://assets.example.com/products/mouse.jpg"
+    }
+  ]
+}

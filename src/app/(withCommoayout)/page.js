@@ -1,16 +1,22 @@
-"use client"
-import { useRouter } from "next/navigation";
 
 
-const HomePage = () => {
-  const router = useRouter()
-  const handelNavigation = () => {
-    router.push('/dasboard')
-  }
+import ProductCard from '../../components/products/ProductCard'
+
+const HomePage = async () => {
+  const res = await fetch("http://localhost:5000/products", {
+    cache: "force-cache"
+  })
+  const products = await res.json()
+
+
+
   return (
     <div className="text-center">
       <h1 className="text-7xl">Hellow World</h1>
-      <button onClick={handelNavigation} className="my-5">Dashboard</button>
+      <div className='grid grid-cols-3 gap-8 w-[90%] mx-auto'>
+        {products.map(product => <ProductCard key={product.id} product={product} />)}
+
+      </div>
 
     </div>
   );
