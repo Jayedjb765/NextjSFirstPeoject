@@ -1,9 +1,19 @@
 import React from "react";
+import ProductCard from "../../components/products/ProductCard";
 
-const ProductsPage = () => {
+const ProductsPage = async () => {
+  const res = await fetch("http://localhost:5000/products", {
+    cache: "no-store",
+  });
+  const products = await res.json();
+  console.log(products);
   return (
     <div>
-      <h1 className="text-3xl text-center">All product page </h1>
+      <div className="grid grid-cols-3 gap-8 w-[90%] mx-auto">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
     </div>
   );
 };

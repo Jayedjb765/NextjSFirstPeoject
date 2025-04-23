@@ -1,5 +1,6 @@
 
 
+import Link from 'next/link';
 import ProductCard from '../../components/products/ProductCard'
 
 const HomePage = async () => {
@@ -19,6 +20,9 @@ const HomePage = async () => {
         {products.slice(0, 3).map(product => <ProductCard key={product.id} product={product} />)}
 
       </div>
+      <Link href='/products'><div className="card-actions justify-center mt-10">
+        <button className="btn btn-primary">Show more</button>
+      </div></Link>
 
     </div>
   );
