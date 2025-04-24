@@ -1,6 +1,10 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -27,13 +31,52 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link href="/about">About Us</Link>
+              <Link
+                href="/about"
+                className={
+                  pathname == "/about"
+                    ? "text-blue-500 underline"
+                    : "text-black hover:underline"
+                }
+              >
+                About Us
+              </Link>
             </li>
             <li>
-              <Link href="/counter">Counter</Link>
+              <Link
+                href="/products"
+                className={
+                  pathname == "/products"
+                    ? "text-blue-500 underline"
+                    : "text-black hover:underline"
+                }
+              >
+                Products
+              </Link>
             </li>
             <li>
-              <Link href="/login">Login</Link>
+              <Link
+                href="/counter"
+                className={
+                  pathname == "/counter"
+                    ? "text-blue-500 underline"
+                    : "text-black hover:underline"
+                }
+              >
+                Counter
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/login"
+                className={
+                  pathname == "/login"
+                    ? "text-blue-500 underline"
+                    : "text-black hover:underline"
+                }
+              >
+                Login
+              </Link>
             </li>
           </ul>
         </div>
@@ -42,13 +85,52 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href="/about">About Us</Link>
+            <Link
+              href="/about"
+              className={
+                pathname == "/about"
+                  ? "text-blue-500 underline"
+                  : "text-black hover:underline"
+              }
+            >
+              About Us
+            </Link>
           </li>
           <li>
-            <Link href="/counter">Counter</Link>
+            <Link
+              href="/products"
+              className={
+                pathname == "/products"
+                  ? "text-blue-500 underline"
+                  : "text-black hover:underline"
+              }
+            >
+              Products{" "}
+            </Link>
           </li>
           <li>
-            <Link href="/login">Login</Link>
+            <Link
+              href="/counter"
+              className={
+                pathname == "/counter"
+                  ? "text-blue-500 underline"
+                  : "text-black hover:underline"
+              }
+            >
+              Counter
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/login"
+              className={
+                pathname == "/login"
+                  ? "text-blue-500 underline"
+                  : "text-black hover:underline"
+              }
+            >
+              Login
+            </Link>
           </li>
         </ul>
       </div>

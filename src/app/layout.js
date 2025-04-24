@@ -18,7 +18,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={roboto.className}>
 
-        {children}
+        <div className='min-h-screen'> {children}</div>
+
+        <div>
+          <footer className='text-center bg-gray-500 py-5'>This is fotter</footer>
+        </div>
       </body>
     </html>
   );
